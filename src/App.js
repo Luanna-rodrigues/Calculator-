@@ -1,7 +1,7 @@
 import "./App.css";
 import Calculator from "./pages/Calculator";
 import { ThemeProvider } from "styled-components";
-import theme from './theme'
+import theme from "./theme";
 
 function App() {
   return (

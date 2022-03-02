@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Grid } from "@material-ui/core";
 
-const styledGridList = styled(Grid)`
+const StyledGridList = styled(Grid)`
   display: flex;
   justify-content: center;
 
@@ -10,4 +10,4 @@ const styledGridList = styled(Grid)`
   }
 `;
 
-export default styledGridList;
+export default StyledGridList;

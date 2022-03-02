@@ -1,8 +1,13 @@
-import { Box, Container, Paper, Grid } from "@material-ui/core";
+import { Box, Container, Grid } from "@material-ui/core";
 
 import React, { useState, useEffect } from "react";
 import itemsList from "./items-list";
-import { StyledButton, StyledTextField, StyledGridList } from "../components";
+import {
+  StyledButton,
+  StyledTextField,
+  StyledGridList,
+  StyledPaper,
+} from "../components";
 
 const Calculator = () => {
   const [data, setData] = useState({ result: [], isError: null });
@@ -12,8 +17,8 @@ const Calculator = () => {
       .flatMap(({ items }) => items)
       .find(({ label }) => label === event?.key);
 
-    if(event.key === "Backspace") {
-      return handleClick(null, 'C');
+    if (event.key === "Backspace") {
+      return handleClick(null, "C");
     }
 
     if (item) {
@@ -111,39 +116,37 @@ const Calculator = () => {
   };
 
   return (
-    <>
-      <Container maxWidth="xs">
-        <Box m={5} />
-        <Paper elevation={3}>
-          <Grid>
-            <StyledTextField
-              id="total-result"
-              placeholder="result"
-              label="result"
-              variant="outlined"
-              disabled={true}
-              value={data?.result?.join("")}
-            />
-          </Grid>
+    <Container maxWidth="xs">
+      <Box m={5} />
+      <StyledPaper elevation={3}>
+        <Grid>
+          <StyledTextField
+            id="total-result"
+            placeholder="result"
+            label="result"
+            variant="outlined"
+            disabled={true}
+            value={data?.result?.join("")}
+          />
+        </Grid>
 
-          {itemsList.map(({ items }, index) => (
-            <StyledGridList key={index}>
-              {items.map(({ label, number, operator, color }, i) => (
-                <Grid item key={label}>
-                  <StyledButton
-                    variant="contained"
-                    color={color}
-                    onClick={() => handleClick(number, operator)}
-                  >
-                    {label}
-                  </StyledButton>
-                </Grid>
-              ))}
-            </StyledGridList>
-          ))}
-        </Paper>
-      </Container>
-    </>
+        {itemsList.map(({ items }, index) => (
+          <StyledGridList key={index}>
+            {items.map(({ label, number, operator, color }, i) => (
+              <Grid item key={label}>
+                <StyledButton
+                  variant="contained"
+                  color={color}
+                  onClick={() => handleClick(number, operator)}
+                >
+                  {label}
+                </StyledButton>
+              </Grid>
+            ))}
+          </StyledGridList>
+        ))}
+      </StyledPaper>
+    </Container>
   );
 };
 

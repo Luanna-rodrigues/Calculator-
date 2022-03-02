@@ -3,6 +3,8 @@ const theme = {
     primary: "#add8e6",
     secondary: "#ffc0cb",
     default: "#ffb6c1",
+    lightpink: "#fff0f5",
+    lightblue: "#f0ffff",
   },
   fonts: ["sans-serif", "Roboto"],
   fontSizes: {

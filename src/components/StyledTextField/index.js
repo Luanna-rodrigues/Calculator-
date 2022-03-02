@@ -7,6 +7,7 @@ const StyledTextField = styled(TextField)`
   background-color: lightblue;
   input {
     text-align: right;
+    font-weight: bold;
   }
 `;
 

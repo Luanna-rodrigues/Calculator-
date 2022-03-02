@@ -122,8 +122,7 @@ const Calculator = () => {
         <Grid>
           <StyledTextField
             id="total-result"
-            placeholder="result"
-            label="result"
+            placeholder="0"
             variant="outlined"
             disabled={true}
             value={data?.result?.join("")}

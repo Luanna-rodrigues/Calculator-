@@ -8,7 +8,7 @@ const StyledTextField = styled(TextField)`
   input {
     text-align: right;
     font-weight: bold;
-    color:black;
+    color: black;
   }
 `;
 

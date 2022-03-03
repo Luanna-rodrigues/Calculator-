@@ -4,7 +4,7 @@ const theme = {
     secondary: "#ffc0cb",
     default: "#D6AAC7",
     lightpink: "#fff0f5",
-    lightblue: "#f0ffff",
+    lightblue: "#add8e6",
     black: "	#000000",
   },
   fonts: ["sans-serif", "Roboto"],
